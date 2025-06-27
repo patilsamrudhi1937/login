@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <base href="./">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/icon" href="./assets/img1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./login.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wave"></div>
+  <div class="container" id="container">
+	<div class="form-container sign-up-container">
+        <form action="#" [formGroup]="sign-form">
+			<h1>Create Account</h1>
+            <div class="form-group">
+			  <input type="text" placeholder="Name" id="name" />
+            </div>
+            <div class="form-group">
+			  <input type="email" placeholder="Email" id="email" />
+            </div>
+            <div class="form-group">
+			  <input type="password" placeholder="Password"  id="password"/>
+            </div>
+            <div class="form-group">
+			  <input type="password" placeholder="Password" id="password?" />
+            </div>
+			<button href="#">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#" [formGroup]="login-form">
+			<h1>Sign In</h1>
+            <div class="form-group">
+			  <input type="email" placeholder="Email/Username" id="Username" />
+            </div>
+            <div class="form-group">
+			    <input type="password" placeholder="Password"  id="password"/>
+            </div>
+			<a href="#">Forgot your password?</a>
+			<button href="#">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn" href="#">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" href="#">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+	
+</script>
+</body>
+</html>
